@@ -3,8 +3,8 @@ layout: page
 title: About
 ---
 
-Hey there! This page is included as an example. Feel free to customize it for
-your own use.
+This is a technical blog that collects thoughts on development, testing, software maintenance, and related items.
 
-Follow [instructions](<http://www.texts.io/support/0017/>) to publish your blog
+
+P.S. Follow [instructions](<http://www.texts.io/support/0017/>) to publish your blog
 on GitHub Pages.
