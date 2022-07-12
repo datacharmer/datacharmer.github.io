@@ -14,36 +14,8 @@ testscript usage. In this post we'll focus on these three problems:
 The solution for all the above is to have dynamically generated scripts in `testdata`. We will start with a template for
 a single deployment, which we place in the `templates` directory.
 
-```
-# templates/single.tmpl
-env HOME={ {.Home}}
-env TMPDIR={ {.TmpDir}}
-env sb_dir=$HOME/sandboxes/msb_{ {.DbPathVer}}
-
-[!exec:dbdeployer] skip 'dbdeployer executable not found'
-
-! exists $sb_dir
-
-exec dbdeployer deploy single { {.DbVersion}}
-stdout 'Database installed in .*/sandboxes/msb_{ {.DbPathVer}}'
-stdout 'sandbox server started'
-! stderr .
-exists $sb_dir
-
-exists $sb_dir/use
-exists $sb_dir/start
-exists $sb_dir/status
-exists $sb_dir/stop
-
-exec $sb_dir/test_sb
-stdout '# fail  :     0'
-! stderr .
-
-exec dbdeployer delete msb_{ {.DbPathVer}}
-stdout 'sandboxes/msb_{ {.DbPathVer}}'
-! stderr .
-! exists $sb_dir
-```
+![](<../images/listing1.jpg>)
+(See code at <https://github.com/datacharmer/testscript-explore/blob/main/attempt2/templates/single.tmpl>)
 
 This template contains the same statements used in the previous posts, with the difference that the literal values are now
 set as [text/template](https://pkg.go.dev/text/template) variables. Several advantages are evident here:
