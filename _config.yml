@@ -1,11 +1,11 @@
-title:              Blog
-tagline:            on GitHub Pages
-description:        Content-focused template for a blog hosted on GitHub Pages.
-url:                http://YourName.github.io
+title:              The Data Charmer
+tagline:            Thoughts and notes on software development, databases, and QA
+description:        A set of experiments on testing in Go, especially testing binary executables within the `go test` framework.
+url:                http://datacharmer.github.io
 
 author:
-  name:             Your Name
-  url:              https://twitter.com/YourName
+  name:             Giuseppe Maxia
+  url:              https://twitter.com/datacharmer
   email:            YourName@gmail.com
 
 # GitHub Pages / Jekyll configuration
