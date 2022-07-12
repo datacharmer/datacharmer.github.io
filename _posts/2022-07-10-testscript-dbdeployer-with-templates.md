@@ -16,16 +16,16 @@ a single deployment, which we place in the `templates` directory.
 
 ```
 # templates/single.tmpl
-env HOME={{.Home}}
-env TMPDIR={{.TmpDir}}
-env sb_dir=$HOME/sandboxes/msb_{{.DbPathVer}}
+env HOME={ {.Home}}
+env TMPDIR={ {.TmpDir}}
+env sb_dir=$HOME/sandboxes/msb_{ {.DbPathVer}}
 
 [!exec:dbdeployer] skip 'dbdeployer executable not found'
 
 ! exists $sb_dir
 
-exec dbdeployer deploy single {{.DbVersion}}
-stdout 'Database installed in .*/sandboxes/msb_{{.DbPathVer}}'
+exec dbdeployer deploy single { {.DbVersion}}
+stdout 'Database installed in .*/sandboxes/msb_{ {.DbPathVer}}'
 stdout 'sandbox server started'
 ! stderr .
 exists $sb_dir
@@ -39,8 +39,8 @@ exec $sb_dir/test_sb
 stdout '# fail  :     0'
 ! stderr .
 
-exec dbdeployer delete msb_{{.DbPathVer}}
-stdout 'sandboxes/msb_{{.DbPathVer}}'
+exec dbdeployer delete msb_{ {.DbPathVer}}
+stdout 'sandboxes/msb_{ {.DbPathVer}}'
 ! stderr .
 ! exists $sb_dir
 ```
