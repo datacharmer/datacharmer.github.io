@@ -4,7 +4,7 @@ description: Generating several testdata elements from a template
 date: 2022-07-10
 ---
 
-In the [previous post](https://datacharmer.github.io/testscript-intro/) we saw several problems with 
+In the [previous post](https://datacharmer.github.io/testscript-dbdeployer-first-attempt/) we saw several problems with 
 testscript usage. In this post we'll focus on these three problems:
 
 * HOME directory and TMPDIR need to be customized
