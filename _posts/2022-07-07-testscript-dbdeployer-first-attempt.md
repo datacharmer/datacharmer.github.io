@@ -1,7 +1,7 @@
 ---
 title: First attempt at testscript with dbdeployer
 description: How I created a functioning test, overcoming the first problems
-date: 2022-07-06
+date: 2022-07-07
 ---
 
 # Getting testscript to do the heavy lifting
