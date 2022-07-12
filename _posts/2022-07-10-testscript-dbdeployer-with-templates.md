@@ -23,7 +23,7 @@ set as [text/template](https://pkg.go.dev/text/template) variables. Several adva
 * The HOME directory and TMPDIR are set programmatically
 * The database version and its corresponding directory name are also defined dynamically, and we can use them in the `stdout` expected text.
 
-Now, to the practicalities. A test function using `testcript` will fail if the test data directory doesn't exist or it is empty.
+Now, to the practicalities. A test function using `testscript` will fail if the test data directory doesn't exist or it is empty.
 Thus, we need to fill that directory before the testing function starts. We do that using [TestMain](https://pkg.go.dev/testing#hdr-Main).
 
 ```go
